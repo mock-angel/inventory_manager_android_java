@@ -40,6 +40,7 @@ public class user extends AppCompatActivity {
             String conpass = ed3.getText().toString();
 
             SQLiteDatabase db = openOrCreateDatabase("pos", Context.MODE_PRIVATE, null);
+
             db.execSQL("CREATE TABLE IF NOT EXISTS user(id INTEGER PRIMARY KEY AUTOINCREMENT,user VARCHAR,pass VARCHAR,conpass VARCHAR )");
 
 

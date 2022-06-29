@@ -69,6 +69,10 @@ public class login extends AppCompatActivity {
     public String checkUser(String name, String pass)
     {
         SQLiteDatabase db = openOrCreateDatabase("pos", Context.MODE_PRIVATE, null);
+
+
+
+
         Cursor cursor=db.rawQuery("SELECT id,user,pass FROM user WHERE user=? AND pass=?",new String[]{name,pass});
         if(cursor.getCount()>0) {
             cursor.moveToFirst();
