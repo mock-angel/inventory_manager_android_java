@@ -1,7 +1,6 @@
-package com.example.kobinath.pos;
+package com.mock_angel.inventory_manager.i_manager;
 
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
@@ -10,14 +9,12 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class product extends AppCompatActivity {
     private Spinner spinner;
@@ -47,7 +44,7 @@ public class product extends AppCompatActivity {
             }
         });
         //category
-        SQLiteDatabase db = openOrCreateDatabase("pos", Context.MODE_PRIVATE, null);
+        SQLiteDatabase db = openOrCreateDatabase("i_manager", Context.MODE_PRIVATE, null);
         final Cursor c = db.rawQuery("select category from category",null);
         int category = c.getColumnIndex("category");
         titles.clear();
@@ -94,7 +91,7 @@ public class product extends AppCompatActivity {
             String brand = spinner1.getSelectedItem().toString();
             String qty = ed2.getText().toString();
             String price = ed3.getText().toString();
-            SQLiteDatabase db = openOrCreateDatabase("pos", Context.MODE_PRIVATE, null);
+            SQLiteDatabase db = openOrCreateDatabase("i_manager", Context.MODE_PRIVATE, null);
             db.execSQL("CREATE TABLE IF NOT EXISTS product(id INTEGER PRIMARY KEY AUTOINCREMENT,proname VARCHAR,category VARCHAR,brand VARCHAR,qty VARCHAR,price VARCHAR)");
 
             String sql = "insert into product(proname,category,brand,qty,price)values(?,?,?,?,?)";

@@ -1,4 +1,4 @@
-package com.example.kobinath.pos;
+package com.mock_angel.inventory_manager.i_manager;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -86,7 +86,7 @@ public class pos extends AppCompatActivity {
     public void search()
     {
 
-        SQLiteDatabase db = openOrCreateDatabase("pos", Context.MODE_PRIVATE, null);
+        SQLiteDatabase db = openOrCreateDatabase("i_manager", Context.MODE_PRIVATE, null);
         String id = ed1.getText().toString();
         final Cursor c = db.rawQuery("select * from product where id = '"+id+"' ",null);
         int proname = c.getColumnIndex("proname");
@@ -123,7 +123,7 @@ public class pos extends AppCompatActivity {
             String total1 = ed5.getText().toString();
 
 
-            SQLiteDatabase db = openOrCreateDatabase("pos", Context.MODE_PRIVATE, null);
+            SQLiteDatabase db = openOrCreateDatabase("i_manager", Context.MODE_PRIVATE, null);
             String id = ed1.getText().toString();
             final Cursor c = db.rawQuery("select * from product where id = '"+id+"' ",null);
             int qty = c.getColumnIndex("qty");

@@ -1,4 +1,4 @@
-package com.example.kobinath.pos;
+package com.mock_angel.inventory_manager.i_manager;
 
 import android.content.Context;
 import android.content.Intent;
@@ -25,7 +25,7 @@ public class productview extends AppCompatActivity {
         setContentView(R.layout.activity_productview);
 
 
-        SQLiteDatabase db = openOrCreateDatabase("pos", Context.MODE_PRIVATE, null);
+        SQLiteDatabase db = openOrCreateDatabase("i_manager", Context.MODE_PRIVATE, null);
 
         lst1 = findViewById(R.id.lst1);
         final Cursor c = db.rawQuery("select * from product",null);

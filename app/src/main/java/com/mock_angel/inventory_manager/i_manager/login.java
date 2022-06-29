@@ -1,23 +1,17 @@
-package com.example.kobinath.pos;
+package com.mock_angel.inventory_manager.i_manager;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteStatement;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
 
 public class login extends AppCompatActivity {
 
@@ -68,7 +62,7 @@ public class login extends AppCompatActivity {
     }
     public String checkUser(String name, String pass)
     {
-        SQLiteDatabase db = openOrCreateDatabase("pos", Context.MODE_PRIVATE, null);
+        SQLiteDatabase db = openOrCreateDatabase("i_manager", Context.MODE_PRIVATE, null);
 
 
 

@@ -1,4 +1,4 @@
-package com.example.kobinath.pos;
+package com.mock_angel.inventory_manager.i_manager;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -37,12 +37,12 @@ public class brand extends AppCompatActivity {
         });
     }
     public void insert() {
-        try {
+    try {
             String brand = ed1.getText().toString();
             String description = ed2.getText().toString();
 
 
-            SQLiteDatabase db = openOrCreateDatabase("pos", Context.MODE_PRIVATE, null);
+            SQLiteDatabase db = openOrCreateDatabase("i_manager", Context.MODE_PRIVATE, null);
             db.execSQL("CREATE TABLE IF NOT EXISTS brand(id INTEGER PRIMARY KEY AUTOINCREMENT,brand VARCHAR,description VARCHAR)");
 
             String sql = "insert into brand(brand,description)values(?,?)";

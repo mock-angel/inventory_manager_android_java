@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.kobinath.pos">
+    package="i_manager">
 
     <application
         android:allowBackup="true"
@@ -9,26 +9,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".login" android:exported="true">
+        <activity android:name="inventory_manager.i_manager.login" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".category" />
-        <activity android:name=".brand" />
-        <activity android:name=".product" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".catview" />
-        <activity android:name=".brandview" />
-        <activity android:name=".productview" />
-        <activity android:name=".pos" />
-        <activity android:name=".posview" />
-        <activity android:name=".user" />
-        <activity android:name=".editcategory" />
-        <activity android:name=".brandedit" />
-        <activity android:name=".productedit"></activity>
+        <activity android:name="inventory_manager.i_manager.category" />
+        <activity android:name="inventory_manager.i_manager.brand" />
+        <activity android:name="inventory_manager.i_manager.product" />
+        <activity android:name="inventory_manager.i_manager.MainActivity" />
+        <activity android:name="inventory_manager.i_manager.catview" />
+        <activity android:name="inventory_manager.i_manager.brandview" />
+        <activity android:name="inventory_manager.i_manager.productview" />
+        <activity android:name="inventory_manager.i_manager.pos" />
+        <activity android:name="inventory_manager.i_manager.posview" />
+        <activity android:name="inventory_manager.i_manager.user" />
+        <activity android:name="inventory_manager.i_manager.editcategory" />
+        <activity android:name="inventory_manager.i_manager.brandedit" />
+        <activity android:name="inventory_manager.i_manager.productedit"></activity>
     </application>
 
 </manifest>

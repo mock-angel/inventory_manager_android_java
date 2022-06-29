@@ -1,4 +1,4 @@
-package com.example.kobinath.pos;
+package com.mock_angel.inventory_manager.i_manager;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.kobinath.pos", appContext.getPackageName());
+        assertEquals("com.example.inventory_manager.i_manager", appContext.getPackageName());
     }
 }

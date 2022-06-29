@@ -1,4 +1,4 @@
-package com.example.kobinath.pos;
+package com.mock_angel.inventory_manager.i_manager;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -39,7 +39,7 @@ public class user extends AppCompatActivity {
             String pass = ed2.getText().toString();
             String conpass = ed3.getText().toString();
 
-            SQLiteDatabase db = openOrCreateDatabase("pos", Context.MODE_PRIVATE, null);
+            SQLiteDatabase db = openOrCreateDatabase("i_manager", Context.MODE_PRIVATE, null);
 
             db.execSQL("CREATE TABLE IF NOT EXISTS user(id INTEGER PRIMARY KEY AUTOINCREMENT,user VARCHAR,pass VARCHAR,conpass VARCHAR )");
 

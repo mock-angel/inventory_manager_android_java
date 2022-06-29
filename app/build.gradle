@@ -4,7 +4,7 @@ plugins {
 android {
     compileSdk 31
     defaultConfig {
-        applicationId "com.example.mock_angel.pos"
+        applicationId "com.mock_angel.example.i_manager"
         minSdk 30
         targetSdk 31
         versionCode 1
